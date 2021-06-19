@@ -10,10 +10,8 @@ import os
 import sys
 import traceback
 
-from pyrogram import (
-    Client,
-    filters
-)
+from pyrogram import Client
+from pyrogram import filters as Filters
 
 from termbot import (
     AUTH_USERS,
@@ -23,7 +21,7 @@ from termbot import (
 )
 
 
-@Client.on_message(filters.command([EVAL_CMD_TRIGGER]) & Filters.chat(AUTH_USERS))
+@Client.on_message(Filters.command([EVAL_CMD_TRIGGER]) & Filters.chat(AUTH_USERS))
 async def evaluation_cmd_t(client, message):
     status_message = await message.reply_text(PROCESS_RUNNING, quote=True)
 
