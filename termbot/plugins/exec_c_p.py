@@ -7,10 +7,9 @@
 
 import asyncio
 
-from pyrogram import (
-    Client,
-    Filters
-)
+from pyrogram import Client
+from pyrogram import filters as Filters
+
 
 from termbot import (
     AUTH_USERS,
