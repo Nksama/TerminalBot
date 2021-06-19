@@ -6,10 +6,9 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
-from pyrogram import (
-    Client,
-    Filters
-)
+
+from pyrogram import Client
+from pyrogram import filters as Filters
 
 from termbot import (
     AUTH_USERS,
